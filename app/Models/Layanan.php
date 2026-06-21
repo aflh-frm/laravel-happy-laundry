@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Layanan extends Model
 {
-    //
+    protected $fillable = ['nama', 'harga', 'satuan', 'estimasi'];
 }
