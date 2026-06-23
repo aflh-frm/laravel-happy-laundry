@@ -6,8 +6,9 @@ use App\Http\Controllers\Api\LayananController;
 use App\Http\Controllers\Api\PelangganController;
 use App\Http\Controllers\Api\PakaianController;
 use App\Http\Controllers\Api\TransaksiController;
+use App\Http\Controllers\Api\AuthController;
 
-// Membuat semua rute CRUD otomatis (GET, POST, PUT, DELETE)
+Route::post('login', [AuthController::class, 'login']);
 Route::apiResource('layanan', LayananController::class);
 Route::apiResource('pelanggan', PelangganController::class);
 Route::apiResource('pakaian', PakaianController::class);
