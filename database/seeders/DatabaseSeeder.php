@@ -32,5 +32,9 @@ class DatabaseSeeder extends Seeder
             'password' => Hash::make('password123'), // Password dienkripsi
             'role' => 'karyawan'
         ]);
+
+        \App\Models\Kuota::create([
+            'max_quota' => 150
+        ]);
     }
 }

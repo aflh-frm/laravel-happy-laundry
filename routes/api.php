@@ -7,7 +7,10 @@ use App\Http\Controllers\Api\PelangganController;
 use App\Http\Controllers\Api\PakaianController;
 use App\Http\Controllers\Api\TransaksiController;
 use App\Http\Controllers\Api\AuthController;
+use App\Http\Controllers\Api\KuotaController;
 
+Route::get('kuota', [KuotaController::class, 'index']);
+Route::put('kuota', [KuotaController::class, 'update']);
 Route::post('login', [AuthController::class, 'login']);
 Route::apiResource('layanan', LayananController::class);
 Route::apiResource('pelanggan', PelangganController::class);
